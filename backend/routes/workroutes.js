@@ -5,8 +5,9 @@ const {
     createworkout,getAllworkout,getWorkout,deleteWorkout,updateWorkout
 }=require("../controller/workoutController")
 
+const requireAuth=require("../Middleware/requireAuth");
 
-
+router.use(requireAuth)
 router.get("/",getAllworkout);
 //
 

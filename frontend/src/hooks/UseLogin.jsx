@@ -19,11 +19,12 @@ export const UseLogin = () => {
 
       // Save user to localStorage
       localStorage.setItem("user", JSON.stringify(response.data));
-
+      
       // Dispatch login action
       dispatch({ type: "LOGIN", payload: response.data });
 
       setIsLoading(false);
+      
     } catch (err) {
       // Handle error response
       setError(
